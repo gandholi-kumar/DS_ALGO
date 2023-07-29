@@ -48,7 +48,7 @@ function mainFunction() {
         var objBinaryTree = new BinaryTree();
         var nodes = objBinaryTree.buildTree(arrTrees[i]);
         if (nodes) {
-            console.log("Index: " + i + ", Value: " + JSON.stringify(nodes));
+            console.log("Index: ".concat(i, ", Value: ").concat(JSON.stringify(nodes)));
         }
     }
 }
