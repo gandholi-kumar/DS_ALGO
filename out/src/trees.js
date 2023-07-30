@@ -37,6 +37,127 @@ var BinaryTree = /** @class */ (function () {
         newNode.right = this.buildTree(nodes);
         return newNode;
     };
+    /**
+     * PreOrder Traversal of a Binary tree
+     * Root -> Left subtree -> Right subtree
+     * @param tree holds the Binary tree
+     * @returns array of node data for a given Binary tree
+     */
+    BinaryTree.prototype.preOrderTraversal = function (tree) {
+        var arrPreOrder = [];
+        this.preOrderRec(tree, arrPreOrder);
+        return arrPreOrder;
+    };
+    /**
+     * PreOrder recursive call to traversal over Binary tree
+     * @param tree hold the Binary tree
+     * @param inOrderArr memo array of tree data
+     * @returns value of a node in Binary tree
+     */
+    BinaryTree.prototype.preOrderRec = function (tree, arrVal) {
+        if (tree == null) {
+            return;
+        }
+        arrVal.push(tree.data);
+        this.preOrderRec(tree.left, arrVal);
+        this.preOrderRec(tree.right, arrVal);
+    };
+    /**
+     * InOrder Traversal of a Binary tree
+     * Left subtree -> Root -> Right subtree
+     * @param tree holds the Binary tree
+     * @returns array of node data for a given Binary tree
+     */
+    BinaryTree.prototype.inOrderTraversal = function (tree) {
+        var inOrderArr = [];
+        this.inOrderRec(tree, inOrderArr);
+        return inOrderArr;
+    };
+    /**
+     * InOrder recursive call to traversal over Binary tree
+     * @param tree hold the Binary tree
+     * @param inOrderArr memo array of tree data
+     * @returns value of a node in Binary tree
+     */
+    BinaryTree.prototype.inOrderRec = function (tree, inOrderArr) {
+        if (tree == null) {
+            return;
+        }
+        this.inOrderRec(tree.left, inOrderArr);
+        inOrderArr.push(tree.data);
+        this.inOrderRec(tree.right, inOrderArr);
+    };
+    /**
+     * PostOrder Traversal of a Binary tree
+     * Left subtree -> Right subtree -> Root
+     * @param tree holds the Binary tree
+     * @returns array of node data for a given Binary tree
+     */
+    BinaryTree.prototype.postOrderTraversal = function (tree) {
+        var postOrderArr = [];
+        this.postOrderRec(tree, postOrderArr);
+        return postOrderArr;
+    };
+    /**
+     * PostOrder recursive call to traversal over Binary tree
+     * @param tree hold the Binary tree
+     * @param inOrderArr memo array of tree data
+     * @returns value of a node in Binary tree
+     */
+    BinaryTree.prototype.postOrderRec = function (tree, postOrderArr) {
+        if (tree == null) {
+            return;
+        }
+        this.postOrderRec(tree.left, postOrderArr);
+        this.postOrderRec(tree.right, postOrderArr);
+        postOrderArr.push(tree.data);
+    };
+    /**
+     * LevelOrder Traversal of a Binary tree
+     * From Root till it reaches leaf nodes
+     * @param tree holds the Binary tree
+     * @returns array of node data for a given Binary tree
+     */
+    BinaryTree.prototype.levelOrderTraversal = function (tree) {
+        var levelOrderArr = [];
+        var queue = [];
+        this.levelOrderRec(tree, levelOrderArr, queue);
+        return levelOrderArr;
+    };
+    /**
+     *
+     * @param tree hold the Binary tree
+     * @param levelOrderArr memo array of tree data
+     * @param queue memo queue of tree data
+     * @returns value of a node in Binary tree
+     */
+    BinaryTree.prototype.levelOrderRec = function (tree, levelOrderArr, queue) {
+        if (tree == null) {
+            return;
+        }
+        queue.push(tree);
+        queue.push(null);
+        while (queue.length !== 0) {
+            var currentNode = queue.shift();
+            if (currentNode == undefined || currentNode == null) {
+                if (queue.length === 0) {
+                    break;
+                }
+                else {
+                    queue.push(null);
+                }
+            }
+            else {
+                levelOrderArr.push(currentNode.data);
+                if (currentNode.left !== null) {
+                    queue.push(currentNode.left);
+                }
+                if (currentNode.right !== null) {
+                    queue.push(currentNode.right);
+                }
+            }
+        }
+    };
     return BinaryTree;
 }());
 function mainFunction() {
@@ -45,11 +166,24 @@ function mainFunction() {
         [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, -1, 3, -1, 6, -1, 9, -1, -1],
     ];
     for (var i = 0; i < arrTrees.length; i++) {
+        // Building tree
         var objBinaryTree = new BinaryTree();
         var nodes = objBinaryTree.buildTree(arrTrees[i]);
         if (nodes) {
             console.log("Index: ".concat(i, ", Value: ").concat(JSON.stringify(nodes)));
         }
+        // Pre order traversal
+        var preOrderTraversalVal = objBinaryTree.preOrderTraversal(nodes);
+        console.log("preOrderTraversalVal: ".concat(preOrderTraversalVal));
+        // In order traversal
+        var inOrderTraversalVal = objBinaryTree.inOrderTraversal(nodes);
+        console.log("inOrderTraversalVal: ".concat(inOrderTraversalVal));
+        // Post order traversal
+        var postOrderTraversalVal = objBinaryTree.postOrderTraversal(nodes);
+        console.log("postOrderTraversalVal: ".concat(postOrderTraversalVal));
+        // Level order traversal
+        var levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
+        console.log("levelOrderTraversalVal: ".concat(levelOrderTraversalVal));
     }
 }
 mainFunction();
