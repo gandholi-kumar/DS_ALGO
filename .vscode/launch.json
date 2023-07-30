@@ -10,7 +10,7 @@
       "name": "TreesLearning",
       "preLaunchTask": "tsc: build - tsconfig.json",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceRoot}/src/trees.ts",
+      "program": "${workspaceRoot}/src/main.ts",
       "outFiles": ["${workspaceFolder}/out/src/*.js"]
     }
   ]
