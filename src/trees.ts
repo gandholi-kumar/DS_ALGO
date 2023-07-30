@@ -4,7 +4,7 @@
  * left: holds the left subtree of a node
  * right: holds the right subtree of a node
  */
-class BTNode {
+export class BTNode {
   data: number;
   left: BTNode | null;
   right: BTNode | null;
@@ -20,8 +20,8 @@ class BTNode {
  * Builds Binary tree which is collection of Nodes
  *
  */
-class BinaryTree {
-  idx = -1;
+export class BinaryTree {
+  private idx = -1;
 
   /**
    * Constructs the Binary tree for given array of nodes (pre-order Binary tree),
@@ -32,7 +32,7 @@ class BinaryTree {
   buildTree(nodes: number[]): BTNode | null {
     this.idx++;
 
-    if (nodes[this.idx] == -1) {
+    if (nodes.length === 0 || nodes[this.idx] == -1) {
       return null;
     }
 
@@ -188,37 +188,3 @@ class BinaryTree {
     }
   }
 }
-
-function mainFunction() {
-  const arrTrees: number[][] = [
-    [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],
-    [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, -1, 3, -1, 6, -1, 9, -1, -1],
-  ];
-
-  for (let i = 0; i < arrTrees.length; i++) {
-    // Building tree
-    const objBinaryTree = new BinaryTree();
-    const nodes = objBinaryTree.buildTree(arrTrees[i]);
-    if (nodes) {
-      console.log(`Index: ${i}, Value: ${JSON.stringify(nodes)}`);
-    }
-
-    // Pre order traversal
-    const preOrderTraversalVal = objBinaryTree.preOrderTraversal(nodes);
-    console.log(`preOrderTraversalVal: ${preOrderTraversalVal}`);
-
-    // In order traversal
-    const inOrderTraversalVal = objBinaryTree.inOrderTraversal(nodes);
-    console.log(`inOrderTraversalVal: ${inOrderTraversalVal}`);
-
-    // Post order traversal
-    const postOrderTraversalVal = objBinaryTree.postOrderTraversal(nodes);
-    console.log(`postOrderTraversalVal: ${postOrderTraversalVal}`);
-
-    // Level order traversal
-    const levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
-    console.log(`levelOrderTraversalVal: ${levelOrderTraversalVal}`);
-  }
-}
-
-mainFunction();

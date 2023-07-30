@@ -1,0 +1,28 @@
+{
+  "name": "binarytree",
+  "version": "1.0.0",
+  "description": "Learning binary tree",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gandholi-kumar/DS_ALGO.git"
+  },
+  "keywords": [
+    "binaryTree"
+  ],
+  "author": "saiarunkumar.gandholi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gandholi-kumar/DS_ALGO/issues"
+  },
+  "homepage": "https://github.com/gandholi-kumar/DS_ALGO#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  }
+}

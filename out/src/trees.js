@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BinaryTree = exports.BTNode = void 0;
 /**
  * Build the Node for a Binary tree
  * data: holds the node value
@@ -13,6 +15,7 @@ var BTNode = /** @class */ (function () {
     }
     return BTNode;
 }());
+exports.BTNode = BTNode;
 /**
  * Builds Binary tree which is collection of Nodes
  *
@@ -29,7 +32,7 @@ var BinaryTree = /** @class */ (function () {
      */
     BinaryTree.prototype.buildTree = function (nodes) {
         this.idx++;
-        if (nodes[this.idx] == -1) {
+        if (nodes.length === 0 || nodes[this.idx] == -1) {
             return null;
         }
         var newNode = new BTNode(nodes[this.idx]);
@@ -160,31 +163,5 @@ var BinaryTree = /** @class */ (function () {
     };
     return BinaryTree;
 }());
-function mainFunction() {
-    var arrTrees = [
-        [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],
-        [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, -1, 3, -1, 6, -1, 9, -1, -1],
-    ];
-    for (var i = 0; i < arrTrees.length; i++) {
-        // Building tree
-        var objBinaryTree = new BinaryTree();
-        var nodes = objBinaryTree.buildTree(arrTrees[i]);
-        if (nodes) {
-            console.log("Index: ".concat(i, ", Value: ").concat(JSON.stringify(nodes)));
-        }
-        // Pre order traversal
-        var preOrderTraversalVal = objBinaryTree.preOrderTraversal(nodes);
-        console.log("preOrderTraversalVal: ".concat(preOrderTraversalVal));
-        // In order traversal
-        var inOrderTraversalVal = objBinaryTree.inOrderTraversal(nodes);
-        console.log("inOrderTraversalVal: ".concat(inOrderTraversalVal));
-        // Post order traversal
-        var postOrderTraversalVal = objBinaryTree.postOrderTraversal(nodes);
-        console.log("postOrderTraversalVal: ".concat(postOrderTraversalVal));
-        // Level order traversal
-        var levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
-        console.log("levelOrderTraversalVal: ".concat(levelOrderTraversalVal));
-    }
-}
-mainFunction();
+exports.BinaryTree = BinaryTree;
 //# sourceMappingURL=trees.js.map
