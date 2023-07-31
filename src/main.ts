@@ -1,3 +1,4 @@
+import { findBranches } from "./practice/collections/find_all_branches";
 import { BinaryTree } from "./trees";
 
 function mainFunction() {
@@ -31,12 +32,34 @@ function mainFunction() {
     const levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
     console.log(`levelOrderTraversalVal: ${levelOrderTraversalVal}`);
   }
-  console.log(` ----------------------------------------------------------------------------- `);
+  console.log(
+    ` ----------------------------------------------------------------------------- `
+  );
 
   const arrTreeAlpha: string[][] = [
-    ['a', 'b', 'c', '-1', '-1', 'd', '-1', '-1', 'e', '-1', 'f', '-1', '-1'],
-    ['k', 'l', 'm', 'n', '-1', '-1', 'o', '-1', '-1', 'p', '-1', '-1', 'q', '-1', 'r', '-1', 's', '-1', '-1'],
-  ]
+    ["a", "b", "c", "-1", "-1", "d", "-1", "-1", "e", "-1", "f", "-1", "-1"],
+    [
+      "k",
+      "l",
+      "m",
+      "n",
+      "-1",
+      "-1",
+      "o",
+      "-1",
+      "-1",
+      "p",
+      "-1",
+      "-1",
+      "q",
+      "-1",
+      "r",
+      "-1",
+      "s",
+      "-1",
+      "-1",
+    ],
+  ];
 
   for (let i = 0; i < arrTreeAlpha.length; i++) {
     // Building tree
@@ -62,7 +85,9 @@ function mainFunction() {
     const levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
     console.log(`levelOrderTraversalVal: ${levelOrderTraversalVal}`);
   }
-
 }
 
-mainFunction();
+/* Practice functionCalls */
+// mainFunction();
+// practice();
+findBranches();

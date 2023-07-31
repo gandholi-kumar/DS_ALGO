@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var find_all_branches_1 = require("./practice/collections/find_all_branches");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [
@@ -29,8 +30,28 @@ function mainFunction() {
     }
     console.log(" ----------------------------------------------------------------------------- ");
     var arrTreeAlpha = [
-        ['a', 'b', 'c', '-1', '-1', 'd', '-1', '-1', 'e', '-1', 'f', '-1', '-1'],
-        ['k', 'l', 'm', 'n', '-1', '-1', 'o', '-1', '-1', 'p', '-1', '-1', 'q', '-1', 'r', '-1', 's', '-1', '-1'],
+        ["a", "b", "c", "-1", "-1", "d", "-1", "-1", "e", "-1", "f", "-1", "-1"],
+        [
+            "k",
+            "l",
+            "m",
+            "n",
+            "-1",
+            "-1",
+            "o",
+            "-1",
+            "-1",
+            "p",
+            "-1",
+            "-1",
+            "q",
+            "-1",
+            "r",
+            "-1",
+            "s",
+            "-1",
+            "-1",
+        ],
     ];
     for (var i = 0; i < arrTreeAlpha.length; i++) {
         // Building tree
@@ -53,5 +74,8 @@ function mainFunction() {
         console.log("levelOrderTraversalVal: ".concat(levelOrderTraversalVal));
     }
 }
-mainFunction();
+/* Practice functionCalls */
+// mainFunction();
+// practice();
+(0, find_all_branches_1.findBranches)();
 //# sourceMappingURL=main.js.map
