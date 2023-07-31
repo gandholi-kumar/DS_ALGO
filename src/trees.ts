@@ -4,12 +4,12 @@
  * left: holds the left subtree of a node
  * right: holds the right subtree of a node
  */
-export class BTNode {
-  data: number;
-  left: BTNode | null;
-  right: BTNode | null;
+export class BTNode<T> {
+  data: T;
+  left: BTNode<T> | null;
+  right: BTNode<T> | null;
 
-  constructor(inp: number) {
+  constructor(inp: T) {
     this.data = inp;
     this.left = null;
     this.right = null;
@@ -20,7 +20,7 @@ export class BTNode {
  * Builds Binary tree which is collection of Nodes
  *
  */
-export class BinaryTree {
+export class BinaryTree<T> {
   private idx = -1;
 
   /**
@@ -29,7 +29,7 @@ export class BinaryTree {
    * @param nodes Holds the list of node data to build a binary tree
    * @returns Binary tree or null
    */
-  buildTree(nodes: number[]): BTNode | null {
+  buildTree(nodes: T[]): BTNode<T> | null {
     this.idx++;
 
     if (nodes.length === 0 || nodes[this.idx] == -1) {
@@ -48,8 +48,8 @@ export class BinaryTree {
    * @param tree holds the Binary tree
    * @returns array of node data for a given Binary tree
    */
-  preOrderTraversal(tree: BTNode | null): number[] {
-    let arrPreOrder: number[] = [];
+  preOrderTraversal(tree: BTNode<T> | null): T[] {
+    let arrPreOrder: T[] = [];
     this.preOrderRec(tree, arrPreOrder);
     return arrPreOrder;
   }
@@ -61,9 +61,9 @@ export class BinaryTree {
    * @returns value of a node in Binary tree
    */
   private preOrderRec(
-    tree: BTNode | null,
-    arrVal: number[]
-  ): number | undefined {
+    tree: BTNode<T> | null,
+    arrVal: T[]
+  ): T | undefined {
     if (tree == null) {
       return;
     }
@@ -79,8 +79,8 @@ export class BinaryTree {
    * @param tree holds the Binary tree
    * @returns array of node data for a given Binary tree
    */
-  inOrderTraversal(tree: BTNode | null): number[] {
-    let inOrderArr: number[] = [];
+  inOrderTraversal(tree: BTNode<T> | null): T[] {
+    let inOrderArr: T[] = [];
     this.inOrderRec(tree, inOrderArr);
     return inOrderArr;
   }
@@ -92,9 +92,9 @@ export class BinaryTree {
    * @returns value of a node in Binary tree
    */
   private inOrderRec(
-    tree: BTNode | null,
-    inOrderArr: number[]
-  ): number | undefined {
+    tree: BTNode<T> | null,
+    inOrderArr: T[]
+  ): T | undefined {
     if (tree == null) {
       return;
     }
@@ -110,8 +110,8 @@ export class BinaryTree {
    * @param tree holds the Binary tree
    * @returns array of node data for a given Binary tree
    */
-  postOrderTraversal(tree: BTNode | null): number[] {
-    let postOrderArr: number[] = [];
+  postOrderTraversal(tree: BTNode<T> | null): T[] {
+    let postOrderArr: T[] = [];
     this.postOrderRec(tree, postOrderArr);
     return postOrderArr;
   }
@@ -123,9 +123,9 @@ export class BinaryTree {
    * @returns value of a node in Binary tree
    */
   private postOrderRec(
-    tree: BTNode | null,
-    postOrderArr: number[]
-  ): number | undefined {
+    tree: BTNode<T> | null,
+    postOrderArr: T[]
+  ): T | undefined {
     if (tree == null) {
       return;
     }
@@ -141,9 +141,9 @@ export class BinaryTree {
    * @param tree holds the Binary tree
    * @returns array of node data for a given Binary tree
    */
-  levelOrderTraversal(tree: BTNode | null): number[] {
-    let levelOrderArr: number[] = [];
-    let queue: Array<BTNode | null> = [];
+  levelOrderTraversal(tree: BTNode<T> | null): T[] {
+    let levelOrderArr: T[] = [];
+    let queue: Array<BTNode<T> | null> = [];
     this.levelOrderRec(tree, levelOrderArr, queue);
     return levelOrderArr;
   }
@@ -156,10 +156,10 @@ export class BinaryTree {
    * @returns value of a node in Binary tree
    */
   private levelOrderRec(
-    tree: BTNode | null,
-    levelOrderArr: number[],
-    queue: Array<BTNode | null>
-  ): number | undefined {
+    tree: BTNode<T> | null,
+    levelOrderArr: T[],
+    queue: Array<BTNode<T> | null>
+  ): T | undefined {
     if (tree == null) {
       return;
     }
@@ -167,7 +167,7 @@ export class BinaryTree {
     queue.push(null);
 
     while (queue.length !== 0) {
-      const currentNode: BTNode | null | undefined = queue.shift();
+      const currentNode: BTNode<T> | null | undefined = queue.shift();
 
       if (currentNode == undefined || currentNode == null) {
         if (queue.length === 0) {

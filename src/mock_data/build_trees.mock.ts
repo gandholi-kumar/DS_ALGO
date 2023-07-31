@@ -4,7 +4,7 @@ export interface binaryTreeMockI {
   index: number;
   inputVal: number[];
   visualization?: string;
-  builtTreeOutput: BTNode;
+  builtTreeOutput: BTNode<number>;
   preOrderTraversalOutput: number[];
   inOrderTraversalOutput: number[];
   postOrderTraversalOutput: number[];
