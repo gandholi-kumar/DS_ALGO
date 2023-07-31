@@ -27,6 +27,31 @@ function mainFunction() {
         var levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
         console.log("levelOrderTraversalVal: ".concat(levelOrderTraversalVal));
     }
+    console.log(" ----------------------------------------------------------------------------- ");
+    var arrTreeAlpha = [
+        ['a', 'b', 'c', '-1', '-1', 'd', '-1', '-1', 'e', '-1', 'f', '-1', '-1'],
+        ['k', 'l', 'm', 'n', '-1', '-1', 'o', '-1', '-1', 'p', '-1', '-1', 'q', '-1', 'r', '-1', 's', '-1', '-1'],
+    ];
+    for (var i = 0; i < arrTreeAlpha.length; i++) {
+        // Building tree
+        var objBinaryTree = new trees_1.BinaryTree();
+        var nodes = objBinaryTree.buildTree(arrTreeAlpha[i]);
+        if (nodes) {
+            console.log("Index: ".concat(i, ", Value: ").concat(JSON.stringify(nodes)));
+        }
+        // Pre order traversal
+        var preOrderTraversalVal = objBinaryTree.preOrderTraversal(nodes);
+        console.log("preOrderTraversalVal: ".concat(preOrderTraversalVal));
+        // In order traversal
+        var inOrderTraversalVal = objBinaryTree.inOrderTraversal(nodes);
+        console.log("inOrderTraversalVal: ".concat(inOrderTraversalVal));
+        // Post order traversal
+        var postOrderTraversalVal = objBinaryTree.postOrderTraversal(nodes);
+        console.log("postOrderTraversalVal: ".concat(postOrderTraversalVal));
+        // Level order traversal
+        var levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
+        console.log("levelOrderTraversalVal: ".concat(levelOrderTraversalVal));
+    }
 }
 mainFunction();
 //# sourceMappingURL=main.js.map

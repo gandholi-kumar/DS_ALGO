@@ -11,14 +11,14 @@ describe("Data structure", () => {
   describe("Binary Tree", () => {
     it("should not create for empty inputs", () => {
       const mockData: number[] = [];
-      let treeObj = new BinaryTree();
+      let treeObj = new BinaryTree<number>();
       const val = treeObj.buildTree(mockData);
       expect(val).toBeNull();
     });
 
     it("should create for given input", () => {
       for (let i = 0; i < mockData.length; i++) {
-        let treeObj = new BinaryTree();
+        let treeObj = new BinaryTree<number>();
         const val = treeObj.buildTree(mockData[i].inputVal);
         expect(val).toEqual(mockData[i].builtTreeOutput);
       }
@@ -27,14 +27,14 @@ describe("Data structure", () => {
 
   describe("PreOrder Traversal", () => {
     it("must return empty array for null input", () => {
-      let treeObj = new BinaryTree();
+      let treeObj = new BinaryTree<number>();
       const preOrderTraversalVal = treeObj.preOrderTraversal(null);
       expect(preOrderTraversalVal).toEqual([]);
     });
 
     it("must return preOrder value", () => {
       for (let i = 0; i < mockData.length; i++) {
-        let treeObj = new BinaryTree();
+        let treeObj = new BinaryTree<number>();
         const preOrderTraversalVal = treeObj.preOrderTraversal(
           mockData[i].builtTreeOutput
         );
@@ -47,14 +47,14 @@ describe("Data structure", () => {
 
   describe("InOrder Traversal", () => {
     it("must return empty array for null input", () => {
-      let treeObj = new BinaryTree();
+      let treeObj = new BinaryTree<number>();
       const inOrderTraversalVal = treeObj.inOrderTraversal(null);
       expect(inOrderTraversalVal).toEqual([]);
     });
 
     it("must return inOrder value", () => {
       for (let i = 0; i < mockData.length; i++) {
-        let treeObj = new BinaryTree();
+        let treeObj = new BinaryTree<number>();
         const inOrderTraversalVal = treeObj.inOrderTraversal(
           mockData[i].builtTreeOutput
         );
@@ -65,14 +65,14 @@ describe("Data structure", () => {
 
   describe("PostOrder Traversal", () => {
     it("must return empty array for null input", () => {
-      let treeObj = new BinaryTree();
+      let treeObj = new BinaryTree<number>();
       const postOrderTraversalVal = treeObj.postOrderTraversal(null);
       expect(postOrderTraversalVal).toEqual([]);
     });
 
     it("must return inOrder value", () => {
       for (let i = 0; i < mockData.length; i++) {
-        let treeObj = new BinaryTree();
+        let treeObj = new BinaryTree<number>();
         const postOrderTraversalVal = treeObj.postOrderTraversal(
           mockData[i].builtTreeOutput
         );
@@ -85,14 +85,14 @@ describe("Data structure", () => {
 
   describe("LevelOrder Traversal", () => {
     it("must return empty array for null input", () => {
-      let treeObj = new BinaryTree();
+      let treeObj = new BinaryTree<number>();
       const levelOrderTraversalVal = treeObj.levelOrderTraversal(null);
       expect(levelOrderTraversalVal).toEqual([]);
     });
 
     it("must return inOrder value", () => {
       for (let i = 0; i < mockData.length; i++) {
-        let treeObj = new BinaryTree();
+        let treeObj = new BinaryTree<number>();
         const levelOrderTraversalVal = treeObj.levelOrderTraversal(
           mockData[i].builtTreeOutput
         );
