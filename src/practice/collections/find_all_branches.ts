@@ -1,6 +1,6 @@
 import { BTNode, BinaryTree } from "../../trees";
 
-export class FindAllBranches extends BinaryTree<T> {
+export class FindAllBranches<T> extends BinaryTree<T> {
   public findBranches(bT: BTNode<T>) {
     let collector: T[] = [];
     let branches: T[][] = [];
@@ -38,7 +38,7 @@ export function findBranches() {
   ];
 
   for (let i = 0; i < preOrderInp.length; i++) {
-    const objFindAllBranches: FindAllBranches = new FindAllBranches<number>();
+    const objFindAllBranches: FindAllBranches<number> = new FindAllBranches<number>();
     const builtTree = objFindAllBranches.buildTree(preOrderInp[i]);
     console.log(JSON.stringify(builtTree));
 
