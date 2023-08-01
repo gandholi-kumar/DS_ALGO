@@ -1,17 +1,17 @@
 import { BTNode, BinaryTree } from "../../trees";
 
-export class FindAllBranches extends BinaryTree<number> {
-  public findBranches(bT: BTNode<number>) {
-    let collector: number[] = [];
-    let branches: number[][] = [];
+export class FindAllBranches extends BinaryTree<T> {
+  public findBranches(bT: BTNode<T>) {
+    let collector: T[] = [];
+    let branches: T[][] = [];
     this.findBranchesRec(bT, collector, branches);
     return branches;
   }
 
   private findBranchesRec(
-    bT: BTNode<number> | null,
-    collector: number[],
-    branches: number[][]
+    bT: BTNode<T> | null,
+    collector: T[],
+    branches: T[][]
   ) {
     if (bT == null) {
       return;
@@ -38,7 +38,7 @@ export function findBranches() {
   ];
 
   for (let i = 0; i < preOrderInp.length; i++) {
-    const objFindAllBranches: FindAllBranches = new FindAllBranches();
+    const objFindAllBranches: FindAllBranches = new FindAllBranches<number>();
     const builtTree = objFindAllBranches.buildTree(preOrderInp[i]);
     console.log(JSON.stringify(builtTree));
 
