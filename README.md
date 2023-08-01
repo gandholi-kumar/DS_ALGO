@@ -6,9 +6,9 @@
   - Parent node
   - Ancestors of a node
   - Leaf node
-- Construct Binary Tree:
+- Construct Binary Tree: [All Traversal](src/trees.ts)
   - from PreOrder
-- Traversal Binary Tree:
+- Traversal Binary Tree: [All Traversal](src/trees.ts)
   - PreOrder Traversal
     - Root
     - Left subtree
@@ -23,6 +23,12 @@
     - Root
   - Level Order Traversal
     - Each level from root along the height
+- Practice
+  - Core concepts:
+    - Find all branches [branches](src/practice/collections/find_all_branches.ts)
+    - Find all ancestors of a node
+    - Find all leaf nodes
+    - Find the diameter
 
 ### References
 
