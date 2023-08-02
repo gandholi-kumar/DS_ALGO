@@ -56,7 +56,7 @@ var FindAllBranches = /** @class */ (function (_super) {
 exports.FindAllBranches = FindAllBranches;
 function findBranches() {
     var preOrderInp = [
-        [1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1],
+        [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],
         [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, -1, 3, -1, 6, -1, 9, -1, -1],
     ];
     for (var i = 0; i < preOrderInp.length; i++) {

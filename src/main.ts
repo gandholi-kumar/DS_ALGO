@@ -1,6 +1,7 @@
 import { findAncestorsOfNode } from "./core_concepts/find_all_ancestors_of_a_node";
 import { findAncestorsOfArrayOfNode } from "./core_concepts/find_all_ancestors_of_arr_of_nodes";
 import { findBranches } from "./core_concepts/find_all_branches";
+import { findAllLeafNodes } from "./core_concepts/find_all_leaf_nodes";
 import { BinaryTree } from "./trees";
 
 function mainFunction() {
@@ -94,4 +95,5 @@ function mainFunction() {
 // practice();
 // findBranches();
 // findAncestorsOfNode();
-findAncestorsOfArrayOfNode();
+// findAncestorsOfArrayOfNode();
+findAllLeafNodes();

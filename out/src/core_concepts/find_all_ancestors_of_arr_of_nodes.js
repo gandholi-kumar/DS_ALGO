@@ -59,7 +59,7 @@ exports.FindAllAncestorsOfArrayOfNode = FindAllAncestorsOfArrayOfNode;
 function findAncestorsOfArrayOfNode() {
     var preOrderInp = [
         {
-            preOrderData: [1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1],
+            preOrderData: [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],
             node: [5, 6, 2],
         },
         {
