@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var find_all_leaf_nodes_1 = require("./core_concepts/find_all_leaf_nodes");
+var find_height_of_tree_1 = require("./core_concepts/find_height_of_tree");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [
@@ -80,5 +80,7 @@ function mainFunction() {
 // findBranches();
 // findAncestorsOfNode();
 // findAncestorsOfArrayOfNode();
-(0, find_all_leaf_nodes_1.findAllLeafNodes)();
+// findAllLeafNodes();
+(0, find_height_of_tree_1.findHeight)();
+// findDiameter();
 //# sourceMappingURL=main.js.map

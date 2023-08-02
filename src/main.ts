@@ -2,6 +2,8 @@ import { findAncestorsOfNode } from "./core_concepts/find_all_ancestors_of_a_nod
 import { findAncestorsOfArrayOfNode } from "./core_concepts/find_all_ancestors_of_arr_of_nodes";
 import { findBranches } from "./core_concepts/find_all_branches";
 import { findAllLeafNodes } from "./core_concepts/find_all_leaf_nodes";
+import { findHeight } from "./core_concepts/find_height_of_tree";
+import { findDiameter } from "./core_concepts/find_longest_diameter";
 import { BinaryTree } from "./trees";
 
 function mainFunction() {
@@ -96,4 +98,6 @@ function mainFunction() {
 // findBranches();
 // findAncestorsOfNode();
 // findAncestorsOfArrayOfNode();
-findAllLeafNodes();
+// findAllLeafNodes();
+findHeight();
+// findDiameter();
