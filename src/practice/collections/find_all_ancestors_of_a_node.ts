@@ -20,13 +20,13 @@ export class FindAllAncestorsOfANode<T> extends BinaryTree<T> {
 
     collector.push(BT.data);
 
+    if (BT.data === nodeData) {
+      ancestors.push(...collector);
+    }
+
     if (BT.left == null && BT.right == null) {
       collector.pop();
       return;
-    }
-
-    if (BT.data === nodeData) {
-      ancestors.push(...collector);
     }
 
     this.getAncestorsNodeRec(BT.left, nodeData, collector, ancestors);

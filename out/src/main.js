@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var find_all_branches_1 = require("./practice/collections/find_all_branches");
+var find_all_ancestors_of_a_node_1 = require("./practice/collections/find_all_ancestors_of_a_node");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [
@@ -77,5 +77,6 @@ function mainFunction() {
 /* Practice functionCalls */
 // mainFunction();
 // practice();
-(0, find_all_branches_1.findBranches)();
+// findBranches();
+(0, find_all_ancestors_of_a_node_1.findAncestorsOfNode)();
 //# sourceMappingURL=main.js.map

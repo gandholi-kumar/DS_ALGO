@@ -1,3 +1,4 @@
+import { findAncestorsOfNode } from "./practice/collections/find_all_ancestors_of_a_node";
 import { findBranches } from "./practice/collections/find_all_branches";
 import { BinaryTree } from "./trees";
 
@@ -90,4 +91,5 @@ function mainFunction() {
 /* Practice functionCalls */
 // mainFunction();
 // practice();
-findBranches();
+// findBranches();
+findAncestorsOfNode();
