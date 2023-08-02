@@ -1,4 +1,5 @@
 ### Binary Tree
+---
 
 - Basic concepts:
   - Node
@@ -23,14 +24,16 @@
     - Root
   - Level Order Traversal
     - Each level from root along the height
-- Practice
-  - Core concepts:
-    - Find all branches [branches](src/practice/collections/find_all_branches.ts)
-    - Find all ancestors of a node
-    - Find all leaf nodes
-    - Find the diameter
+
+### Core concepts:
+---
+  - Find all branches [find_all_branches](src/practice/core_concepts/find_all_branches.ts)
+  - Find all ancestors of a node [find_all_ancestors_of_a_node](src/practice/core_concepts/find_all_ancestors_of_a_node.ts)
+  - Find all ancestors of array of node 
+  - Find all leaf nodes
+  - Find the diameter
 
 ### References
-
+---
 - VSCode Debugging: https://www.youtube.com/watch?v=-zNFZjRo9Cc
 - Binary Tree course: https://www.youtube.com/watch?v=-DzowlcaUmE&t=456s
