@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var find_all_ancestors_of_a_node_1 = require("./practice/core_concepts/find_all_ancestors_of_a_node");
+var find_all_ancestors_of_a_node_1 = require("./core_concepts/find_all_ancestors_of_a_node");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [

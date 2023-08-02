@@ -1,7 +1,7 @@
 ### Binary Tree
 ---
 
-- Basic concepts:
+- Basic concepts: [Tree structure visualization](src/mock_data/tree_visualization.md)
   - Node
   - Sub-Trees
   - Parent node
@@ -27,8 +27,8 @@
 
 ### Core concepts:
 ---
-  - Find all branches [find_all_branches](src/practice/core_concepts/find_all_branches.ts)
-  - Find all ancestors of a node [find_all_ancestors_of_a_node](src/practice/core_concepts/find_all_ancestors_of_a_node.ts)
+  - Find all branches [find_all_branches](src/core_concepts/find_all_branches.ts)
+  - Find all ancestors of a node [find_all_ancestors_of_a_node](src/core_concepts/find_all_ancestors_of_a_node.ts)
   - Find all ancestors of array of node 
   - Find all leaf nodes
   - Find the diameter

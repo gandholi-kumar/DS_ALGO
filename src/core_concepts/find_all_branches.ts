@@ -1,4 +1,4 @@
-import { BTNode, BinaryTree } from "../../trees";
+import { BTNode, BinaryTree } from "../trees";
 
 export class FindAllBranches<T> extends BinaryTree<T> {
   public findBranches(bT: BTNode<T>) {

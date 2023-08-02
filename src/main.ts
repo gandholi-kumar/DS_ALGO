@@ -1,5 +1,5 @@
-import { findAncestorsOfNode } from "./practice/core_concepts/find_all_ancestors_of_a_node";
-import { findBranches } from "./practice/core_concepts/find_all_branches";
+import { findAncestorsOfNode } from "./core_concepts/find_all_ancestors_of_a_node";
+import { findBranches } from "./core_concepts/find_all_branches";
 import { BinaryTree } from "./trees";
 
 function mainFunction() {

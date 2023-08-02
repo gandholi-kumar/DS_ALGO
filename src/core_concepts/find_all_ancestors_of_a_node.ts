@@ -1,4 +1,4 @@
-import { BTNode, BinaryTree } from "../../trees";
+import { BTNode, BinaryTree } from "../trees";
 
 export class FindAllAncestorsOfANode<T> extends BinaryTree<T> {
   public getAncestorsNode(BT: BTNode<T>, nodeData: T) {

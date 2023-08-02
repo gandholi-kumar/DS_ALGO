@@ -25,7 +25,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.findBranches = exports.FindAllBranches = void 0;
-var trees_1 = require("../../trees");
+var trees_1 = require("../trees");
 var FindAllBranches = /** @class */ (function (_super) {
     __extends(FindAllBranches, _super);
     function FindAllBranches() {

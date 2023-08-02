@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.findAncestorsOfNode = exports.FindAllAncestorsOfANode = void 0;
-var trees_1 = require("../../trees");
+var trees_1 = require("../trees");
 var FindAllAncestorsOfANode = /** @class */ (function (_super) {
     __extends(FindAllAncestorsOfANode, _super);
     function FindAllAncestorsOfANode() {
