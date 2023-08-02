@@ -29,7 +29,7 @@
 ---
   - Find all branches [find_all_branches](src/core_concepts/find_all_branches.ts)
   - Find all ancestors of a node [find_all_ancestors_of_a_node](src/core_concepts/find_all_ancestors_of_a_node.ts)
-  - Find all ancestors of array of node 
+  - Find all ancestors of array of node [find_all_ancestors_of_arr_of_nodes](src/core_concepts/find_all_ancestors_of_arr_of_nodes.ts)
   - Find all leaf nodes
   - Find the diameter
 
