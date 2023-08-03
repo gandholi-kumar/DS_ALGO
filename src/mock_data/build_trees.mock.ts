@@ -1,17 +1,17 @@
 import { BTNode } from "../trees";
 
-export interface binaryTreeMockI {
-  index: number;
-  inputVal: number[];
+export interface binaryTreeMockI<T> {
+  index: T;
+  inputVal: T[];
   visualization?: string;
-  builtTreeOutput: BTNode<number>;
-  preOrderTraversalOutput: number[];
-  inOrderTraversalOutput: number[];
-  postOrderTraversalOutput: number[];
-  levelOrderTraversalOutput: number[];
+  builtTreeOutput: BTNode<T>;
+  preOrderTraversalOutput: T[];
+  inOrderTraversalOutput: T[];
+  postOrderTraversalOutput: T[];
+  levelOrderTraversalOutput: T[];
 }
 
-export const binaryTreeMock: binaryTreeMockI[] = [
+export const binaryTreeMock: binaryTreeMockI<number>[] = [
   {
     index: 0,
     inputVal: [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],

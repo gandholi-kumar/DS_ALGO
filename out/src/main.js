@@ -1,11 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var find_height_of_tree_1 = require("./core_concepts/find_height_of_tree");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [
         [],
         [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],
         [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, -1, 3, -1, 6, -1, 9, -1, -1],
+        [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, 3, -1, 6, -1, 9, -1, -1, 10, -1, -1]
     ];
     for (var i = 0; i < arrTrees.length; i++) {
         // Building tree
@@ -29,8 +31,28 @@ function mainFunction() {
     }
     console.log(" ----------------------------------------------------------------------------- ");
     var arrTreeAlpha = [
-        ['a', 'b', 'c', '-1', '-1', 'd', '-1', '-1', 'e', '-1', 'f', '-1', '-1'],
-        ['k', 'l', 'm', 'n', '-1', '-1', 'o', '-1', '-1', 'p', '-1', '-1', 'q', '-1', 'r', '-1', 's', '-1', '-1'],
+        ["a", "b", "c", "-1", "-1", "d", "-1", "-1", "e", "-1", "f", "-1", "-1"],
+        [
+            "k",
+            "l",
+            "m",
+            "n",
+            "-1",
+            "-1",
+            "o",
+            "-1",
+            "-1",
+            "p",
+            "-1",
+            "-1",
+            "q",
+            "-1",
+            "r",
+            "-1",
+            "s",
+            "-1",
+            "-1",
+        ],
     ];
     for (var i = 0; i < arrTreeAlpha.length; i++) {
         // Building tree
@@ -53,5 +75,13 @@ function mainFunction() {
         console.log("levelOrderTraversalVal: ".concat(levelOrderTraversalVal));
     }
 }
-mainFunction();
+/* Practice functionCalls */
+// mainFunction();
+// practice();
+// findBranches();
+// findAncestorsOfNode();
+// findAncestorsOfArrayOfNode();
+// findAllLeafNodes();
+(0, find_height_of_tree_1.findHeight)();
+// findDiameter();
 //# sourceMappingURL=main.js.map

@@ -1,3 +1,9 @@
+import { findAncestorsOfNode } from "./core_concepts/find_all_ancestors_of_a_node";
+import { findAncestorsOfArrayOfNode } from "./core_concepts/find_all_ancestors_of_arr_of_nodes";
+import { findBranches } from "./core_concepts/find_all_branches";
+import { findAllLeafNodes } from "./core_concepts/find_all_leaf_nodes";
+import { findHeight } from "./core_concepts/find_height_of_tree";
+import { findDiameter } from "./core_concepts/find_longest_diameter";
 import { BinaryTree } from "./trees";
 
 function mainFunction() {
@@ -5,6 +11,7 @@ function mainFunction() {
     [],
     [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],
     [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, -1, 3, -1, 6, -1, 9, -1, -1],
+    [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, 3, -1, 6, -1, 9, -1, -1, 10, -1, -1]
   ];
 
   for (let i = 0; i < arrTrees.length; i++) {
@@ -31,12 +38,34 @@ function mainFunction() {
     const levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
     console.log(`levelOrderTraversalVal: ${levelOrderTraversalVal}`);
   }
-  console.log(` ----------------------------------------------------------------------------- `);
+  console.log(
+    ` ----------------------------------------------------------------------------- `
+  );
 
   const arrTreeAlpha: string[][] = [
-    ['a', 'b', 'c', '-1', '-1', 'd', '-1', '-1', 'e', '-1', 'f', '-1', '-1'],
-    ['k', 'l', 'm', 'n', '-1', '-1', 'o', '-1', '-1', 'p', '-1', '-1', 'q', '-1', 'r', '-1', 's', '-1', '-1'],
-  ]
+    ["a", "b", "c", "-1", "-1", "d", "-1", "-1", "e", "-1", "f", "-1", "-1"],
+    [
+      "k",
+      "l",
+      "m",
+      "n",
+      "-1",
+      "-1",
+      "o",
+      "-1",
+      "-1",
+      "p",
+      "-1",
+      "-1",
+      "q",
+      "-1",
+      "r",
+      "-1",
+      "s",
+      "-1",
+      "-1",
+    ],
+  ];
 
   for (let i = 0; i < arrTreeAlpha.length; i++) {
     // Building tree
@@ -62,7 +91,14 @@ function mainFunction() {
     const levelOrderTraversalVal = objBinaryTree.levelOrderTraversal(nodes);
     console.log(`levelOrderTraversalVal: ${levelOrderTraversalVal}`);
   }
-
 }
 
-mainFunction();
+/* Practice functionCalls */
+// mainFunction();
+// practice();
+// findBranches();
+// findAncestorsOfNode();
+// findAncestorsOfArrayOfNode();
+// findAllLeafNodes();
+findHeight();
+// findDiameter();
