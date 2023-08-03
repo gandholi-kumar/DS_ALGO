@@ -31,11 +31,11 @@
 ---
 
 - Find all branches [find_all_branches](src/core_concepts/find_all_branches.ts)
-- Find all ancestors of a node [find_all_ancestors_of_a_node](src/core_concepts/find_all_ancestors_of_a_node.ts)
+- Find the longest branch [find_longest_branche](src/core_concepts/find_longest_branch.ts)
 - Find all ancestors of array of node [find_all_ancestors_of_arr_of_nodes](src/core_concepts/find_all_ancestors_of_arr_of_nodes.ts)
+- Find all ancestors of a node [find_all_ancestors_of_a_node](src/core_concepts/find_all_ancestors_of_a_node.ts)
 - Find all leaf nodes [find_all_leaf_nodes](src/core_concepts/find_all_leaf_nodes.ts)
 - Find the height of a tree [find_height_of_tree](src\core_concepts\find_height_of_tree.ts)
-- Find the longest diameter
 
 ### References
 

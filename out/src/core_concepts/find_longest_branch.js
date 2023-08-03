@@ -66,4 +66,4 @@ function findBranch() {
     }
 }
 exports.findBranch = findBranch;
-//# sourceMappingURL=find_longest_diameter.js.map
+//# sourceMappingURL=find_longest_branch.js.map
