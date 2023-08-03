@@ -3,7 +3,7 @@ import { binaryTreeMock, binaryTreeMockI } from "./mock_data/build_trees.mock";
 import { BinaryTree } from "./trees";
 
 describe("Data structure", () => {
-  let mockData: binaryTreeMockI[];
+  let mockData: binaryTreeMockI<number>[];
   beforeEach(() => {
     mockData = [...binaryTreeMock];
   });
