@@ -23,8 +23,8 @@ var FindHeightOfTree = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     FindHeightOfTree.prototype.getHeight = function (BT) {
-        if (BT.left == null || BT.right == null) {
-            return 1;
+        if (BT == null) {
+            return 0;
         }
         else {
             var leftHeight = this.getHeight(BT.left);
@@ -40,6 +40,7 @@ function findHeight() {
     var preOrderInp = [
         [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1],
         [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, -1, 3, -1, 6, -1, 9, -1, -1],
+        [1, 2, 4, 7, -1, -1, 8, -1, -1, 5, -1, 3, -1, 6, -1, 9, -1, -1, 10, -1, -1]
     ];
     for (var i = 0; i < preOrderInp.length; i++) {
         var objFindHeightOfTree = new FindHeightOfTree();
