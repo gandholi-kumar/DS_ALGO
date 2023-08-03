@@ -4,7 +4,7 @@ import { BTNode, BinaryTree } from "../trees";
 export class FindLongestBranch<T> extends BinaryTree<T> {
   public getLongestBranch(BT: BTNode<T>) {
     let collector: T[] = [];
-    let branch: T[] = [];
+    let branch: T[][] = [[]];
     this.getLongestBranchRec(BT, collector, branch);
     return branch;
   }
@@ -12,7 +12,7 @@ export class FindLongestBranch<T> extends BinaryTree<T> {
   private getLongestBranchRec(
     BT: BTNode<T> | null,
     collector: T[],
-    branch: T[]
+    branch: T[][]
   ) {
     if (BT == null) {
       return;
@@ -21,9 +21,11 @@ export class FindLongestBranch<T> extends BinaryTree<T> {
     collector.push(BT.data);
 
     if (BT.left == null && BT.right == null) {
-      if(branch.length <= collector.length) {
+      if (branch[0].length < collector.length) {
         branch.length = 0;
-        branch.push(...collector);
+        branch.push([...collector]);
+      } else if (branch[0].length === collector.length) {
+        branch.push([...collector]);
       }
       collector.pop();
       return;

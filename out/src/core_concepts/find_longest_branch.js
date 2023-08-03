@@ -14,6 +14,15 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.findBranch = exports.FindLongestBranch = void 0;
 var trees_1 = require("../trees");
@@ -25,7 +34,7 @@ var FindLongestBranch = /** @class */ (function (_super) {
     }
     FindLongestBranch.prototype.getLongestBranch = function (BT) {
         var collector = [];
-        var branch = [];
+        var branch = [[]];
         this.getLongestBranchRec(BT, collector, branch);
         return branch;
     };
@@ -35,9 +44,12 @@ var FindLongestBranch = /** @class */ (function (_super) {
         }
         collector.push(BT.data);
         if (BT.left == null && BT.right == null) {
-            if (branch.length <= collector.length) {
+            if (branch[0].length < collector.length) {
                 branch.length = 0;
-                branch.push.apply(branch, collector);
+                branch.push(__spreadArray([], collector, true));
+            }
+            else if (branch[0].length === collector.length) {
+                branch.push(__spreadArray([], collector, true));
             }
             collector.pop();
             return;
