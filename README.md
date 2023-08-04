@@ -41,7 +41,7 @@
 ### Practice:
 ---
 Tree Coding Problems: https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
-- Determine if two trees are identical
+- Determine if two trees are identical [determine_if_two_trees_are_identical](src/practice/determine_if_two_trees_are_identical.ts)
 - Mirror tree
 - Symmetric Tree
 - Diameter of tree
