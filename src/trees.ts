@@ -32,7 +32,7 @@ export class BinaryTree<T> {
   buildTree(nodes: T[]): BTNode<T> | null {
     this.idx++;
 
-    if (nodes.length === 0 || nodes[this.idx] == -1) {
+    if (nodes[this.idx] === undefined || nodes.length === 0 || nodes[this.idx] == -1) {
       return null;
     }
 

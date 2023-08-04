@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var find_longest_branch_1 = require("./core_concepts/find_longest_branch");
+var determine_if_two_trees_are_identical_1 = require("./practice/determine_if_two_trees_are_identical");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [
@@ -75,13 +75,14 @@ function mainFunction() {
         console.log("levelOrderTraversalVal: ".concat(levelOrderTraversalVal));
     }
 }
-/* Practice functionCalls */
+/* Core functionCalls */
 // mainFunction();
-// practice();
 // findBranches();
 // findAncestorsOfNode();
 // findAncestorsOfArrayOfNode();
 // findAllLeafNodes();
 // findHeight();
-(0, find_longest_branch_1.findBranch)();
+// findBranch();
+/* Practice functionCalls*/
+(0, determine_if_two_trees_are_identical_1.isIndenticalTrees)();
 //# sourceMappingURL=main.js.map
