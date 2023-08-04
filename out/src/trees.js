@@ -32,7 +32,7 @@ var BinaryTree = /** @class */ (function () {
      */
     BinaryTree.prototype.buildTree = function (nodes) {
         this.idx++;
-        if (nodes.length === 0 || nodes[this.idx] == -1) {
+        if (nodes[this.idx] === undefined || nodes.length === 0 || nodes[this.idx] == -1) {
             return null;
         }
         var newNode = new BTNode(nodes[this.idx]);
