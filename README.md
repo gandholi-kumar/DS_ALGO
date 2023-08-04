@@ -37,6 +37,25 @@
 - Find all leaf nodes [find_all_leaf_nodes](src/core_concepts/find_all_leaf_nodes.ts)
 - Find the height of a tree [find_height_of_tree](src\core_concepts\find_height_of_tree.ts)
 
+
+### Practice:
+---
+Tree Coding Problems: https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
+- Determine if two trees are identical
+- Mirror tree
+- Symmetric Tree
+- Diameter of tree
+- Checked for Balanced tree
+- Children Sum Parent
+- Check for BST
+- Array to BST
+- Largest value in each level of binary tree
+- Maximum GCD of siblings of a binary tree
+- Zigzag Tree Traversal
+- Inorder Successor in BST
+- Kth Largest Element in a BST
+
+
 ### References
 
 ---
