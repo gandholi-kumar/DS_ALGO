@@ -86,6 +86,18 @@ var IsTreesIdentical = /** @class */ (function (_super) {
         }
         return true;
     };
+    IsTreesIdentical.prototype.betterApproach = function (BT1, BT2) {
+        if (BT1 === null && BT2 === null)
+            return true;
+        if ((BT1 === null && BT2 !== null) || (BT1 !== null && BT2 === null))
+            return false;
+        var left = this.betterApproach(BT1.left, BT2.left);
+        var right = this.betterApproach(BT1.right, BT2.right);
+        if ((BT1 === null || BT1 === void 0 ? void 0 : BT1.data) === (BT2 === null || BT2 === void 0 ? void 0 : BT2.data) && left && right) {
+            return true;
+        }
+        return false;
+    };
     return IsTreesIdentical;
 }(trees_1.BinaryTree));
 exports.IsTreesIdentical = IsTreesIdentical;
@@ -121,10 +133,11 @@ function isIndenticalTrees() {
         var objFindLongestBranch2 = new IsTreesIdentical();
         var builtTree2 = objFindLongestBranch2.buildTree(preOrderInp.trees[i].tree2);
         console.log(JSON.stringify(builtTree2));
-        if (builtTree1 && builtTree2) {
-            var isIdentical = objFindLongestBranch1.isTwoTreesIdentical(builtTree1, builtTree2);
-            console.log("Index: ".concat(i, ", value: ").concat(JSON.stringify(isIdentical)));
-        }
+        // const isIdentical =
+        //   objFindLongestBranch1.isTwoTreesIdentical(builtTree1, builtTree2);
+        // console.log(`Index: ${i}, value: ${JSON.stringify(isIdentical)}`);
+        var isIdentical = objFindLongestBranch1.betterApproach(builtTree1, builtTree2);
+        console.log("Index: ".concat(i, ", value: ").concat(JSON.stringify(isIdentical)));
     }
 }
 exports.isIndenticalTrees = isIndenticalTrees;

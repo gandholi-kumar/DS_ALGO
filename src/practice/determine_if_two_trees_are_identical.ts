@@ -32,8 +32,8 @@ Output: Trees are not identical = FALSE
 import { BTNode, BinaryTree } from "../trees";
 
 export class IsTreesIdentical<T> extends BinaryTree<T> {
-  
-  public isTwoTreesIdentical(BT1: BTNode<T>, BT2: BTNode<T>): boolean {
+
+  public isTwoTreesIdentical(BT1: BTNode<T> | null, BT2: BTNode<T> | null): boolean {
     let queue: BTNode<T>[] = [];
 
     if (BT1 != null && BT2 != null) {
@@ -73,6 +73,22 @@ export class IsTreesIdentical<T> extends BinaryTree<T> {
       return false;
     }
     return true;
+  }
+
+  public betterApproach(BT1: BTNode<T> | null, BT2: BTNode<T> | null): boolean {
+    if (BT1 === null && BT2 === null) return true;
+
+    if ((BT1 === null && BT2 !== null) || (BT1 !== null && BT2 === null)) return false;
+
+    const left = this.betterApproach(BT1!.left, BT2!.left);
+    const right = this.betterApproach(BT1!.right, BT2!.right);
+
+    if (BT1?.data === BT2?.data && left && right) {
+      return true;
+    }
+
+    return false;
+
   }
 }
 
@@ -120,10 +136,11 @@ export function isIndenticalTrees() {
     const builtTree2 = objFindLongestBranch2.buildTree(preOrderInp.trees[i].tree2);
     console.log(JSON.stringify(builtTree2));
 
-    if (builtTree1 && builtTree2) {
-      const isIdentical =
-        objFindLongestBranch1.isTwoTreesIdentical(builtTree1, builtTree2);
-      console.log(`Index: ${i}, value: ${JSON.stringify(isIdentical)}`);
-    }
+    // const isIdentical =
+    //   objFindLongestBranch1.isTwoTreesIdentical(builtTree1, builtTree2);
+    // console.log(`Index: ${i}, value: ${JSON.stringify(isIdentical)}`);
+    const isIdentical =
+      objFindLongestBranch1.betterApproach(builtTree1, builtTree2);
+    console.log(`Index: ${i}, value: ${JSON.stringify(isIdentical)}`);
   }
 }
