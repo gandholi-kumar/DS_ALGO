@@ -69,6 +69,8 @@ export class IsTreesIdentical<T> extends BinaryTree<T> {
         }
 
       }
+    } else if (BT1 != null || BT2 != null) {
+      return false;
     }
     return true;
   }

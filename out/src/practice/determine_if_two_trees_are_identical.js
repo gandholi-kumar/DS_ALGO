@@ -81,6 +81,9 @@ var IsTreesIdentical = /** @class */ (function (_super) {
                 }
             }
         }
+        else if (BT1 != null || BT2 != null) {
+            return false;
+        }
         return true;
     };
     return IsTreesIdentical;
