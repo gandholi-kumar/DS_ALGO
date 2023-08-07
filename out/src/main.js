@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var determine_if_two_trees_are_identical_1 = require("./practice/determine_if_two_trees_are_identical");
+var mirror_tree_1 = require("./practice/mirror_tree");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [
@@ -84,5 +84,6 @@ function mainFunction() {
 // findHeight();
 // findBranch();
 /* Practice functionCalls*/
-(0, determine_if_two_trees_are_identical_1.isIndenticalTrees)();
+// isIndenticalTrees();
+(0, mirror_tree_1.getMirrorTree)();
 //# sourceMappingURL=main.js.map

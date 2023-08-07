@@ -5,6 +5,7 @@ import { findAllLeafNodes } from "./core_concepts/find_all_leaf_nodes";
 import { findHeight } from "./core_concepts/find_height_of_tree";
 import { findBranch } from "./core_concepts/find_longest_branch";
 import { isIndenticalTrees } from "./practice/determine_if_two_trees_are_identical";
+import { getMirrorTree } from "./practice/mirror_tree";
 import { BinaryTree } from "./trees";
 
 function mainFunction() {
@@ -105,4 +106,5 @@ function mainFunction() {
 
 
 /* Practice functionCalls*/
-isIndenticalTrees();
+// isIndenticalTrees();
+getMirrorTree();
