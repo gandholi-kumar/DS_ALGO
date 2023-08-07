@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var mirror_tree_1 = require("./practice/mirror_tree");
+var symmentric_1 = require("./practice/symmentric");
 var trees_1 = require("./trees");
 function mainFunction() {
     var arrTrees = [
@@ -85,5 +85,6 @@ function mainFunction() {
 // findBranch();
 /* Practice functionCalls*/
 // isIndenticalTrees();
-(0, mirror_tree_1.getMirrorTree)();
+// getMirrorTree();
+(0, symmentric_1.isSymmentricTree)();
 //# sourceMappingURL=main.js.map
