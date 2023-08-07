@@ -42,7 +42,7 @@
 ---
 Tree Coding Problems: https://www.geeksforgeeks.org/top-50-tree-coding-problems-for-interviews/
 - Determine if two trees are identical [determine_if_two_trees_are_identical](src/practice/determine_if_two_trees_are_identical.ts)
-- Mirror tree
+- Mirror tree [Mirror tree](src/practice/mirror_tree.ts)
 - Symmetric Tree
 - Diameter of tree
 - Checked for Balanced tree
